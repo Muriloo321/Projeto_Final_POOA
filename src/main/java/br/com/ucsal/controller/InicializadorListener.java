@@ -1,15 +1,15 @@
 package br.com.ucsal.controller;
 
-import jakarta.servlet.ServletContextEvent;
-import jakarta.servlet.ServletContextListener;
-import jakarta.servlet.annotation.WebListener;
-import org.reflections.Reflections;
-
-import br.com.ucsal.annotations.Rota;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+
+import org.reflections.Reflections;
+
+import br.com.ucsal.annotations.Rota;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.annotation.WebListener;
 
 @WebListener
 public class InicializadorListener implements ServletContextListener {

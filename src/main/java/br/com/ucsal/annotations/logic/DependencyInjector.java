@@ -26,9 +26,9 @@ public class DependencyInjector {
                     // Realiza a injeção de dependência a partir do tipo do campo.
                     if (field.getType().equals(ProdutoService.class)) {
                         // Define o tipo de repositório de forma dinâmica.
-                        int repositoryType = PersistenciaFactory.MEMORIA; 
+                        int repositoryType = PersistenciaFactory.TIPO_MEMORIA; 
                         ProdutoRepository<Produto, Integer> repository =
-                                (ProdutoRepository<Produto, Integer>) PersistenciaFactory.getProdutoRepository(repositoryType);
+                                (ProdutoRepository<Produto, Integer>) PersistenciaFactory.getProductRepository(repositoryType);
 
                         // Gera uma instância do ProdutoService utilizando o repositório correspondente.
                         dependency = new ProdutoService(repository);

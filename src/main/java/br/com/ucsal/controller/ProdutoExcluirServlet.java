@@ -1,6 +1,7 @@
 package br.com.ucsal.controller;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 import br.com.ucsal.annotations.Inject;
 import br.com.ucsal.annotations.Rota;
@@ -11,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @Rota(value = "/excluirProdutos")
-public class ProdutoExcluirServlet implements Command {
+public class ProdutoExcluirServlet implements Command, Serializable{
     private static final long serialVersionUID = 1L;
     
     @Inject
